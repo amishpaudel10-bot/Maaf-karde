@@ -1,26 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div id="question-section">
-            <img id="main-gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/K6jSj8kkjqxZ3G9h8v/giphy.gif" alt="Cute GIF">
-            <h1>Babu maaf kardo nah?</h1>
-            <div class="buttons">
-                <button id="yesBtn">Yes</button>
-                <button id="noBtn">No</button>
-            </div>
-        </div>
-        <div id="success-section" class="hidden">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHpueGZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4bmZ4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/v0Y8yFv6h1x7G/giphy.gif" alt="Happy GIF">
-            <h1>Hehehe, I knew it! ❤️</h1>
+<div id="book-container">
+    <div class="page active" id="p1">
+        <video autoplay muted loop id="bg-video"><source src="your-video.mp4" type="video/mp4"></video>
+        <div class="content">
+            <h1>Babu maaf kardo nah. 🥺</h1>
+            <button onclick="nextPage('p-final')">Yes</button>
+            <button onclick="nextPage('p2')">No</button>
         </div>
     </div>
-    <script src="script.js"></script>
-</body>
-</html>
+
+    <div class="page" id="p2">
+        <div class="content">
+            <h1>Please maaf kardo nah. 🥺</h1>
+            <button onclick="nextPage('p-final')">Yes</button>
+            <button onclick="nextPage('p3')">No</button>
+        </div>
+    </div>
+
+    <div class="page" id="p3">
+        <div class="content">
+            <h1>Please 1 baar kardo nah. 🥺</h1>
+            <button onclick="nextPage('p-final')">Yes</button>
+            <button onclick="nextPage('p4')">No</button>
+        </div>
+    </div>
+
+    <div class="page" id="p4">
+        <div class="content">
+            <h1>Sachme maaf nahi karegi kya? 🥺</h1>
+            <button onclick="nextPage('p-final')">Yes</button>
+            <button onclick="nextPage('p5')">No</button>
+        </div>
+    </div>
+
+    <div class="page" id="p5">
+        <div class="content">
+            <h1>Bas 1 baar maaf kardo? 😘</h1>
+            <button onclick="nextPage('p-final')">Yes</button>
+            <button id="no-btn" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <div class="page" id="p-final">
+        <div class="content">
+            <h1>Mujhe pata tha maaf karogi 😘🫶🏻</h1>
+        </div>
+    </div>
+</div>
